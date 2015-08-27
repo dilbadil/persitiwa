@@ -10,10 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/admin', function(){
-    return view('layouts.adminlte');
-});
-Route::get('twitter-login-callback', function(Illuminate\Http\Request $request) {
+Route::get('twitter-login-callback', ['as' => 'twitter_signin_callback', function(Illuminate\Http\Request $request) {
     
     if (! $request->has('oauth_verifier')) return "Access denied !";
 
@@ -24,22 +21,22 @@ Route::get('twitter-login-callback', function(Illuminate\Http\Request $request) 
     session(['access_token' => $accessToken]);
 
     return redirect('twitter-profile');
-});
+}]);
 
-Route::get('/twitter-login', function(Illuminate\Http\Request $request) {
+Route::get('/login', ['as' => 'login_path', function(Illuminate\Http\Request $request) {
 
     $connection = new Abraham\TwitterOAuth\TwitterOAuth( env('TWITTER_CONSUMER_KEY'), env('TWITTER_CONSUMER_SECRET') );
-    $requestToken = $connection->oauth('oauth/request_token', array('oauth_callback' => "http://localhost:8000/twitter-login-callback"));
+    $requestToken = $connection->oauth('oauth/request_token', array('oauth_callback' => route('twitter_signin_callback')));
 
     session([
         'oauth_token' => $requestToken['oauth_token'],
         'oauth_token_secret' => $requestToken['oauth_token_secret']
     ]);
 
-    $authorizeUrl = $connection->url('oauth/authorize', ['oauth_token' => session('oauth_token')]);
+    $urlTwitter = $connection->url('oauth/authenticate', ['oauth_token' => session('oauth_token')]);
 
-    return "<a href='$authorizeUrl'>Authorize on twitter</a>";
-});
+    return view('layouts.login', compact('urlTwitter'));
+}]);
 
 Route::get('/twitter-profile', function() {
     $accessToken = session('access_token');

@@ -3,6 +3,13 @@
 @section('title', 'Dashboard')
 
 @section('user_image', $twitterAccount->profile_image_url)
+@section('user_fullname', $twitterAccount->name)
+@section('user_username', "@". $twitterAccount->screen_name)
+@section('user_description', $twitterAccount->description)
+@section('breadcrumb')
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Dashboard</li>
+@endsection
 
 @section('content')
     @if (session('message'))
@@ -33,17 +40,15 @@
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Followers</b> <a class="pull-right">1,322</a>
+                  <b>Statuses</b> <a class="pull-right">{{ $twitterAccount->statuses_count }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Following</b> <a class="pull-right">543</a>
+                  <b>Followers</b> <a class="pull-right">{{ $twitterAccount->followers_count }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Friends</b> <a class="pull-right">13,287</a>
+                  <b>Following</b> <a class="pull-right">{{ $twitterAccount->friends_count }}</a>
                 </li>
               </ul>
-
-              <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
             </div><!-- /.box-body -->
           </div><!-- /.box -->
 
@@ -53,18 +58,25 @@
               <h3 class="box-title">About Me</h3>
             </div><!-- /.box-header -->
             <div class="box-body">
+              <strong><i class="fa fa-twitter margin-r-5"></i> Last Status</strong>
+              <p>{{ $twitterAccount->status->text }}</p>
+              <hr>
+
               <strong><i class="fa fa-book margin-r-5"></i>  Education</strong>
               <p class="text-muted">
-                B.S. in Computer Science from the University of Tennessee at Knoxville
+                {{ $twitterAccount->description }}
               </p>
 
               <hr>
 
               <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
-              <p class="text-muted">Malibu, California</p>
+              <p class="text-muted">
+                {{ $twitterAccount->location }}
+              </p>
 
               <hr>
 
+                <!--
               <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
               <p>
                 <span class="label label-danger">UI Design</span>
@@ -75,9 +87,7 @@
               </p>
 
               <hr>
-
-              <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+            -->
             </div><!-- /.box-body -->
           </div><!-- /.box -->
         </div><!-- /.col -->
@@ -85,7 +95,6 @@
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
-              <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
               <li><a href="#settings" data-toggle="tab">Settings</a></li>
             </ul>
             <div class="tab-content">
@@ -107,89 +116,6 @@
 
                 </div><!-- /.post -->
               </div><!-- /.tab-pane -->
-              <div class="tab-pane" id="timeline">
-                <!-- The timeline -->
-                <ul class="timeline timeline-inverse">
-                  <!-- timeline time label -->
-                  <li class="time-label">
-                    <span class="bg-red">
-                      10 Feb. 2014
-                    </span>
-                  </li>
-                  <!-- /.timeline-label -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-envelope bg-blue"></i>
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
-                      <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-                      <div class="timeline-body">
-                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                        weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                        jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                        quora plaxo ideeli hulu weebly balihoo...
-                      </div>
-                      <div class="timeline-footer">
-                        <a class="btn btn-primary btn-xs">Read more</a>
-                        <a class="btn btn-danger btn-xs">Delete</a>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-user bg-aqua"></i>
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-                      <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-comments bg-yellow"></i>
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-                      <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-                      <div class="timeline-body">
-                        Take me to your leader!
-                        Switzerland is small and neutral!
-                        We are more like Germany, ambitious and misunderstood!
-                      </div>
-                      <div class="timeline-footer">
-                        <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <!-- timeline time label -->
-                  <li class="time-label">
-                    <span class="bg-green">
-                      3 Jan. 2014
-                    </span>
-                  </li>
-                  <!-- /.timeline-label -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-camera bg-purple"></i>
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-                      <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-                      <div class="timeline-body">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                      </div>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <li>
-                    <i class="fa fa-clock-o bg-gray"></i>
-                  </li>
-                </ul>
-              </div><!-- /.tab-pane -->
-
               <div class="tab-pane" id="settings">
                 <form class="form-horizontal">
                   <div class="form-group">
