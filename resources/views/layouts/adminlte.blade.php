@@ -42,12 +42,12 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <!-- <a href="index2.html" class="logo"> -->
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
+          <!-- <span class="logo-mini"><b>A</b>LT</span> -->
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Admin</b>LTE</span>
-        </a>
+          <!-- <span class="logo-lg"><b>Admin</b>LTE</span> -->
+        <!-- </a> -->
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -108,14 +108,15 @@
         <section class="sidebar">
           <!-- Sidebar user panel -->
           <div class="user-panel">
-            <div class="pull-left image">
+            <div class=" image" style="padding-left:15px;">
               <img src="@yield('user_image')" class="img-circle" alt="User Image">
             </div>
-            <div class="pull-left info">
+            <div class=" info">
               <p>@yield('user_fullname')</p>
+              <p class="text-muted">{{ "@" . $twitterAccount->screen_name }}</p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
-          </div>
+          </div><!--end-user-panel-->
           <!-- search form -->
           <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
