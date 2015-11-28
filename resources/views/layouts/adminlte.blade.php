@@ -61,7 +61,7 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="@yield('user_image')" class="user-image" alt="User Image">
-                  <span class="hidden-xs">@yield('user_fullname')</span>
+                  <span class="hidden-xs">@yield('user_fullname') <i class="fa fa-angle-down" style="margin-left:7px;font-size:15px;"></i></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
@@ -87,7 +87,7 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      <a href="/profile" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
                       <a href="{{ route('logout_path') }}" class="btn btn-default btn-flat">Sign out</a>
@@ -96,9 +96,9 @@
                 </ul>
               </li>
               <!-- Control Sidebar Toggle Button -->
-              <li>
+              <!-- <li>
                 <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </nav>
@@ -184,9 +184,9 @@
       </div><!-- /.content-wrapper -->
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
+          <b>Version</b> Beta
         </div>
-        <strong>Copyright &copy; {{ date('Y') }} <a href="http://github.com/dilbadil">Dilbadil</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; {{ date('Y') }} <a href="http://github.com/dilbadil">Peristiwa</a>.</strong> All rights reserved.
       </footer>
 
       <!-- Control Sidebar -->
