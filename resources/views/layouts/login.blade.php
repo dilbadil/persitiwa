@@ -30,8 +30,8 @@
         <h1>
           <a href=""><b>Peristiwa</b></a>
         </h1>
-        <p>Kritisi kebakaran "HUTAN" dengan akun twittermu!</p>
-        <span style="font-size:15px;">Laporkan kebakaran hutan dengan cara tweet, Kamu juga bisa menanggapi dan mendukung pemerintah dalam menangani kebakaran hutan yang tengah terjadi di indonesia.
+        <p>Lindungi "HUTAN" dengan tweetmu!</p>
+        <span style="font-size:15px;">Laporkan kerusakan hutan dengan cara tweet, Kamu juga bisa menanggapi dan mendukung pemerintah dalam menangani kerusakan hutan yang tengah terjadi di indonesia.
         Dengan keaktifanmu, secara tidak langsung kamu telah membantu dan mendorong pemerintah unutk mengambil keputusan.
         </span>
       </div><!-- /.login-logo -->
