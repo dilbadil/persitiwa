@@ -4757,6 +4757,7 @@ table.text-center th {
 }
 ul.profile-page-detail{
   text-align: center;
+  font-size: 16px;
 }
 ul.profile-page-detail li {
   border-left: 0;
@@ -4810,18 +4811,18 @@ ul.dropdown-menu.settnav {
 }
 .pop_up_tweet .form-group ul.button-group-popup li button#close {
   background-color: #fff;
-  box-shadow: 0px 2px 12px -3px #000;
+  box-shadow: 0px 2px 10px -3px #000;
 }
 .pop_up_tweet .form-group ul.button-group-popup li button#close:hover {
-  box-shadow: 0px 2px 15px -3px #000;
+  box-shadow: 0px 2px 12px -3px #000;
 }
 .pop_up_tweet .form-group ul.button-group-popup li button.tweet {
   background-color: #27ae60;
   color: #fff;
-  box-shadow: 0px 2px 12px -3px #000;
+  box-shadow: 0px 2px 10px -3px #000;
   margin-left: 5px;
 }
 .pop_up_tweet .form-group ul.button-group-popup li button.tweet:hover {
   background-color: rgba(39, 174, 96, 0.74);
-  box-shadow: 0px 2px 15px -3px #000;
+  box-shadow: 0px 2px 12px -3px #000;
 }
