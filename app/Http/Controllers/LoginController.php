@@ -7,18 +7,31 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Libs\TwitterAPI;
+use App\User;
 
 class LoginController extends Controller
 {
     /**
+     * @var TwitterAPI
+     */
+    protected $twitterAPI;
+
+    /**
+     * @var User
+     */
+    protected $user;
+
+    /**
      * Instance of controller.
      *
      * @param TwitterAPI $twitter
+     * @param User $user
      * @return void
      */
-    public function __construct(TwitterAPI $twitter)
+    public function __construct(TwitterAPI $twitter, User $user)
     {
         $this->twitterAPI = $twitter;
+        $this->user = $user;
     }
 
     /**
@@ -50,6 +63,18 @@ class LoginController extends Controller
         $oauthVerifier = $request->input('oauth_verifier');
         $accessToken = $this->twitterAPI->getAccessToken($oauthVerifier);
 
+        $twitterUsername = $accessToken['screen_name'];
+
+        // Insert into database if no exist.
+        if (! $this->user->whereUsername($twitterUsername)->first())
+        {
+            $user = $this->user->create([
+                'username' => $twitterUsername,
+                'account' => 'twitter'
+            ]);
+            session(['user_id' => $user->id]);
+        }
+
         session()->forget('twitter_account');
         session(['access_token' => $accessToken]);
 
@@ -67,6 +92,7 @@ class LoginController extends Controller
         session()->forget('access_token');
         session()->forget('oauth_token');
         session()->forget('oauth_token_secret');
+        session()->forget('user_id');
 
         return redirect(route('login_path'));
     }

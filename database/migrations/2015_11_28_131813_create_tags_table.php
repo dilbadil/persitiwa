@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStatusesTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,9 @@ class CreateStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('statuses', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('status_id');
-            $table->text('body');
-            $table->string('user_id');
-            $table->string('lokasi_peristiwa');
-            $table->string('lokasi_status');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ class CreateStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('statuses');
+        Schema::drop('tags');
     }
 }
