@@ -3177,19 +3177,25 @@ table.text-center th {
   text-align: left;
   margin-bottom: 25px;
   font-weight: 300;
+  color:#fff;
 }
 .login-logo a,
 .register-logo a {
-  color: #444;
+  color: #fff;
 }
 .login-page,
 .register-page {
-  background: #d2d6de;
+  /*background: #d2d6de;*/
+  background-image: url("../../../background_login.jpg");
+  background-size: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+
 }
 .login-box,
 .register-box {
   width: 500px;
-  margin: 7% 7% auto;
+  margin: 20% 20% auto;
 }
 @media (max-width: 768px) {
   .login-box,
@@ -4728,4 +4734,9 @@ table.text-center th {
   .table-responsive > .table tr td {
     white-space: normal!important;
   }
+}
+
+/*custom css*/
+.image-bg-login {
+  background-image: url("image/background_login.jpg");
 }
