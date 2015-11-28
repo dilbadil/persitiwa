@@ -40,7 +40,7 @@
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Statuses</b> <a class="pull-right">{{ $twitterAccount->statuses_count }}</a>
+                  <b>Tweets</b> <a class="pull-right">{{ $twitterAccount->statuses_count }}</a>
                 </li>
                 <li class="list-group-item">
                   <b>Followers</b> <a class="pull-right">{{ $twitterAccount->followers_count }}</a>

@@ -34,20 +34,23 @@
 
           <!-- Profile Image -->
           <div class="box box-primary">
-            <div class="box-body box-profile">
+            <div class="box-body box-profile" style="background-image:url('{{asset('image/profilebackground.jpg')}}');background-size:100%;background-repeat:no-repeat;background-position:center;color:#fff;">
               <img class="profile-user-img img-responsive img-circle" src="{{ $twitterAccount->profile_image_url }}" alt="User profile picture">
               <h3 class="profile-username text-center">{{ $twitterAccount->name }}</h3>
               <p class="text-muted text-center">{{ "@" . $twitterAccount->screen_name }}</p>
 
-              <ul class="list-group list-group-unbordered">
+              <ul class="list-group list-group-unbordered profile-page-detail">
                 <li class="list-group-item">
-                  <b>Tweets</b> <a class="">{{ $twitterAccount->statuses_count }}</a>
+                  <span>Tweets</span> 
+                  <a class="" style="font-weight:bold;color:#fff;">{{ $twitterAccount->statuses_count }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Followers</b> <a class="">{{ $twitterAccount->followers_count }}</a>
+                  <span>Followers</span> 
+                  <a class="" style="font-weight:bold;color:#fff;">{{ $twitterAccount->followers_count }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Following</b> <a class="">{{ $twitterAccount->friends_count }}</a>
+                  <span>Following</span> 
+                  <a class="" style="font-weight:bold;color:#fff;">{{ $twitterAccount->friends_count }}</a>
                 </li>
               </ul>
             </div><!-- /.box-body -->
