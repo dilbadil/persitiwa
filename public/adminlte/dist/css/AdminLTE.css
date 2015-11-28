@@ -2172,12 +2172,13 @@ a:focus {
 .btn.uppercase {
   text-transform: uppercase;
 }
+
 .btn.btn-flat {
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border-width: 1px;
+    border-radius: 20px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    /*border-width: 5px;*/
 }
 .btn:active {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -3172,8 +3173,8 @@ table.text-center th {
  */
 .login-logo,
 .register-logo {
-  font-size: 35px;
-  text-align: center;
+  font-size: 25px;
+  text-align: left;
   margin-bottom: 25px;
   font-weight: 300;
 }
@@ -3187,8 +3188,8 @@ table.text-center th {
 }
 .login-box,
 .register-box {
-  width: 360px;
-  margin: 7% auto;
+  width: 500px;
+  margin: 7% 7% auto;
 }
 @media (max-width: 768px) {
   .login-box,
@@ -3199,8 +3200,8 @@ table.text-center th {
 }
 .login-box-body,
 .register-box-body {
-  background: #fff;
-  padding: 20px;
+  /*background: #fff;*/
+  /*padding: 20px;*/
   border-top: 0;
   color: #666;
 }
@@ -3326,7 +3327,7 @@ table.text-center th {
   line-height: 34px;
   font-size: 1.6em;
   text-align: center;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  /*border-right: 1px solid rgba(0, 0, 0, 0.2);*/
 }
 .btn-social.btn-lg {
   padding-left: 61px;
@@ -3808,7 +3809,8 @@ table.text-center th {
 .btn-twitter {
   color: #ffffff;
   background-color: #55acee;
-  border-color: rgba(0, 0, 0, 0.2);
+  width: 210px;
+  /*border-color: rgba(0, 0, 0, 0.2);*/
 }
 .btn-twitter:hover,
 .btn-twitter:focus,
@@ -3818,7 +3820,7 @@ table.text-center th {
 .open > .dropdown-toggle.btn-twitter {
   color: #ffffff;
   background-color: #2795e9;
-  border-color: rgba(0, 0, 0, 0.2);
+  /*border-color: rgba(0, 0, 0, 0.2);*/
 }
 .btn-twitter:active,
 .btn-twitter.active,
