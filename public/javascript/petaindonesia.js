@@ -25,7 +25,7 @@ var map = new Raphael(mapContainer, MAP_WIDTH, MAP_HEIGHT);
 map.setViewBox(0,0,10,600);
 
 var style = {
-  fill: "#fff",
+  fill: "#27ae60",
   stroke: "#333",
   "stroke-width": 1,
   "stroke-linejoin": "round",
@@ -41,7 +41,7 @@ var styleLuar = {
 };
 
 var styleRegion = {
-  fill: "rgba(82,158,86,0.0)",
+  fill: "rgba(39,174,96,0.0)",
   stroke: "rgba(82,158,86,0.0)",
   "stroke-width": 1,
   "stroke-linejoin": "round",

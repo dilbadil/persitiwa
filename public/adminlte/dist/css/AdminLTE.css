@@ -4737,6 +4737,8 @@ table.text-center th {
 }
 
 /*custom css*/
-.image-bg-login {
-  background-image: url("image/background_login.jpg");
+.pop_up_tweet {
+  width: 300px;
+  min-height:50px;
+  background-color: yellow; 
 }
