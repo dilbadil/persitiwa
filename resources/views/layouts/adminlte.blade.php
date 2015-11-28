@@ -113,8 +113,8 @@
                 <img src="@yield('user_image')" class="img-circle" alt="User Image">
               </div>
               <div class=" info">
-                <p style="color:#fff;">@yield('user_fullname')</p>
-                <p class="text-muted">{{ "@" . $twitterAccount->screen_name }}</p>
+                <p style="color:#fff;margin-bottom:0;">@yield('user_fullname')</p>
+                <p class="text-muted" style="color:#fff;font-size:11px;">{{ "@" . $twitterAccount->screen_name }}</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
               </div>
             </div>
