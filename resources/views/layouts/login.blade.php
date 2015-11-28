@@ -28,12 +28,12 @@
     <div class="login-box">
       <div class="login-logo">
         <h1>
-          <a href=""><b>Peristiwa</b></a>
+          <a href="">Peristiwa</a>
         </h1>
-        <p>Lindungi "HUTAN" dengan tweetmu!</p>
-        <span style="font-size:15px;">Laporkan kerusakan hutan dengan cara tweet, Kamu juga bisa menanggapi dan mendukung pemerintah dalam menangani kerusakan hutan yang tengah terjadi di indonesia.
+        <span>Lindungi "HUTAN" dengan tweet<strong>mu!</strong></span>
+        <p>Laporkan kerusakan hutan dengan cara tweet, Kamu juga bisa menanggapi dan mendukung pemerintah dalam menangani kerusakan hutan yang tengah terjadi di indonesia.
         Dengan keaktifanmu, secara tidak langsung kamu telah membantu dan mendorong pemerintah unutk mengambil keputusan.
-        </span>
+        </p>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <div class="social-auth-links text-center">
