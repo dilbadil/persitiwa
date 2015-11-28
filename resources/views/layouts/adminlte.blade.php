@@ -134,12 +134,23 @@
             <li class="header">MAIN NAVIGATION</li>
             <li class="active">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                <i class="fa fa-dashboard"></i> <span>Beranda</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fa fa-calendar"></i> <span>Schedule</span>
+                <i class="fa fa-user"></i> <span>Profile</span>
+              </a>
+              <hr>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-area-chart"></i> <span>Stats</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-gear"></i> <span>Settings</span>
               </a>
             </li>
           </ul>
