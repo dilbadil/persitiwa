@@ -37,7 +37,7 @@
             <div class="box-body box-profile" style="background-image:url('{{asset('image/profilebackground.jpg')}}');background-size:100%;background-repeat:no-repeat;background-position:center;color:#fff;">
               <img class="profile-user-img img-responsive img-circle" src="{{ $twitterAccount->profile_image_url }}" alt="User profile picture">
               <h3 class="profile-username text-center">{{ $twitterAccount->name }}</h3>
-              <p class="text-muted text-center">{{ "@" . $twitterAccount->screen_name }}</p>
+              <p class="text-center">{{ "@" . $twitterAccount->screen_name }}</p>
 
               <ul class="list-group list-group-unbordered profile-page-detail">
                 <li class="list-group-item">

@@ -4757,6 +4757,7 @@ table.text-center th {
 }
 ul.profile-page-detail{
   text-align: center;
+  font-size: 16px;
 }
 ul.profile-page-detail li {
   border-left: 0;
@@ -4810,18 +4811,39 @@ ul.dropdown-menu.settnav {
 }
 .pop_up_tweet .form-group ul.button-group-popup li button#close {
   background-color: #fff;
-  box-shadow: 0px 2px 12px -3px #000;
+  box-shadow: 0px 2px 10px -3px #000;
 }
 .pop_up_tweet .form-group ul.button-group-popup li button#close:hover {
-  box-shadow: 0px 2px 15px -3px #000;
+  box-shadow: 0px 2px 12px -3px #000;
 }
 .pop_up_tweet .form-group ul.button-group-popup li button.tweet {
   background-color: #27ae60;
   color: #fff;
-  box-shadow: 0px 2px 12px -3px #000;
+  box-shadow: 0px 2px 10px -3px #000;
   margin-left: 5px;
 }
 .pop_up_tweet .form-group ul.button-group-popup li button.tweet:hover {
   background-color: rgba(39, 174, 96, 0.74);
-  box-shadow: 0px 2px 15px -3px #000;
+  box-shadow: 0px 2px 12px -3px #000;
+}
+.peristiwa-kita .post .tweets {
+  padding-left: 0;
+}
+.peristiwa-kita .post .tweets .tweet {
+  text-align: left;
+  border-bottom: 1px solid #999;
+  margin-bottom: 4px;
+  padding: 10px;
+  list-style: none;
+}
+.peristiwa-kita .post .tweets .tweet:last-child {
+  border-bottom: none;
+}
+.peristiwa-kita .post .tweets .tweet .head-tweet .username {
+  position: relative;
+  top: -49px;
+  left: 55px;
+}
+.peristiwa-kita .post .tweets .tweet .content-tweet {
+  margin-top: -49px;
 }
