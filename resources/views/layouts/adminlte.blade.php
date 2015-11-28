@@ -30,6 +30,9 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
+    <link rel="stylesheet" type="text/css" href="css/s2-docs.css">
+    <link rel="stylesheet" type="text/css" href="css/select2.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,17 +45,27 @@
   <!-- POP UP -->
   <div class="pop_up_background">
         <div class="pop_up_tweet">
-          <h3>Tweet Baru</h3>
+          <h3 class="title">Tweet di Provinsi ini!</h3>
             <form class="form-horizontal" method="POST" action="{{ route('twitter_status_update') }}">
               {!! csrf_field() !!}
               <div class="form-group margin-bottom-none">
-                <div class="col-sm-9">
-                  <input name="status" class="form-control input-sm" placeholder="Status"><br>
-                  <input name="haystack" class="form-control input-sm" placeholder="haystack">
-                </div>
-                <div class="col-sm-3">
-                  <button id="close" class="btn btn-warning btn-block btn-sm">Close</button>
-                  <button type="submit" class="btn btn-danger btn-block btn-sm">Update</button>
+                <div class="col-sm-12">
+                  <textarea name="status" class="form-control input-sm" placeholder="Apa yang terjadi?"></textarea><br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input name="haystack" class="form-control input-sm pull-left" placeholder="#">
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="button-group-popup">
+                        <li>
+                          <button id="close" class="btn btn-default">Close</button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn btn-promary tweet">Tweet</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>                          
               </div>                        
           </form>
@@ -74,7 +87,7 @@
                   <img src="@yield('user_image')" class="user-image" alt="User Image">
                   <span class="hidden-xs">@yield('user_fullname') <i class="fa fa-angle-down" style="margin-left:7px;font-size:15px;"></i></span>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu settnav">
                   <!-- User image -->
                   <li class="user-header">
                     <img src="@yield('user_image')" class="img-circle" alt="User Image">
@@ -86,13 +99,13 @@
                   <!-- Menu Body -->
                   <li class="user-body">
                     <div class="col-xs-4 text-center">
-                      <a href="#">Followers</a>
+                      <a href="#">Tweets</a>
                     </div>
                     <div class="col-xs-4 text-center">
                       <a href="#">Following</a>
                     </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Listed</a>
+                    <div class="col-xs-4 text-center">  
+                      <a href="#">Followers</a>
                     </div>
                   </li>
                   <!-- Menu Footer-->
@@ -373,6 +386,7 @@
     <script type="text/javascript" src="javascript/raphael-min.js"></script>
     <!-- // <script type="text/javascript" src="javascript/petaindonesia.js"></script> -->
     <script type="text/javascript" src="javascript/peta_custom.js"></script>
+    <script type="text/javascript" src="javascript/select2.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
