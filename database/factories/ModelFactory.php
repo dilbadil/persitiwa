@@ -13,9 +13,32 @@
 
 $factory->define(App\User::class, function ($faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->email,
-        'password' => str_random(10),
-        'remember_token' => str_random(10),
+        'username' => $faker->userName,
+        'account' => 'twitter',
+    ];
+
+});
+
+$factory->define(App\Tag::class, function ($faker) {
+    $label = $faker->sentence(2);
+    $name = str_replace(" ", "_", $label);
+    $name = strtolower($name);
+
+    return [
+        'name' => $name,
+        'label' => $label,
+    ];
+});
+
+$factory->define(App\Status::class, function ($faker) {
+    $userIds = App\User::all()->lists('id')->toArray();
+    $provinsiIds = App\Provinsi::all()->lists('id')->toArray();
+
+    return [
+        'status_id' => $faker->ean8,
+        'body' => $faker->text(80),
+        'user_id' => array_rand($userIds),
+        'lokasi_peristiwa' => array_rand($provinsiIds),
+        'lokasi_status' => $faker->longitude
     ];
 });
