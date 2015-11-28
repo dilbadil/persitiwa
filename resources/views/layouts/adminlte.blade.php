@@ -107,14 +107,16 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class=" image" style="padding-left:15px;">
-              <img src="@yield('user_image')" class="img-circle" alt="User Image">
-            </div>
-            <div class=" info">
-              <p>@yield('user_fullname')</p>
-              <p class="text-muted">{{ "@" . $twitterAccount->screen_name }}</p>
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <div class="user-panel" style="background-image:url('{{asset('image/userbackground.jpg')}}');background-size:100%;background-repeat:no-repeat;">
+            <div class="userpanel-wrap">
+              <div class=" image" style="padding-left:15px;">
+                <img src="@yield('user_image')" class="img-circle" alt="User Image">
+              </div>
+              <div class=" info">
+                <p style="color:#fff;">@yield('user_fullname')</p>
+                <p class="text-muted">{{ "@" . $twitterAccount->screen_name }}</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+              </div>
             </div>
           </div><!--end-user-panel-->
           <!-- search form -->
