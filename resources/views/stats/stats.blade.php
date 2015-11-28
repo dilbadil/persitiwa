@@ -9,6 +9,10 @@
 @section('breadcrumb')
 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
 <li class="active">Stats</li>
+ <select style="width:100%" placeholder="haystack">
+    <option value="kalbar">Kalimantan Barat</option>
+    <option value="riau">Riau</option>
+  </select>
 @endsection
 @section('content')
 <!-- BAR CHART -->
