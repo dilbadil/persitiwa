@@ -42,12 +42,12 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <!-- <a href="index2.html" class="logo"> -->
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
+          <!-- <span class="logo-mini"><b>A</b>LT</span> -->
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Admin</b>LTE</span>
-        </a>
+          <!-- <span class="logo-lg"><b>Admin</b>LTE</span> -->
+        <!-- </a> -->
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -107,15 +107,18 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class="pull-left image">
-              <img src="@yield('user_image')" class="img-circle" alt="User Image">
+          <div class="user-panel" style="background-image:url('{{asset('image/userbackground.jpg')}}');background-size:100%;background-repeat:no-repeat;">
+            <div class="userpanel-wrap">
+              <div class=" image" style="padding-left:15px;">
+                <img src="@yield('user_image')" class="img-circle" alt="User Image">
+              </div>
+              <div class=" info">
+                <p style="color:#fff;margin-bottom:0;">@yield('user_fullname')</p>
+                <p class="text-muted" style="color:#fff;font-size:11px;">{{ "@" . $twitterAccount->screen_name }}</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+              </div>
             </div>
-            <div class="pull-left info">
-              <p>@yield('user_fullname')</p>
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
-          </div>
+          </div><!--end-user-panel-->
           <!-- search form -->
           <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
@@ -130,13 +133,24 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+              <a href="/twitter-profile">
+                <i class="fa fa-dashboard"></i> <span>Beranda</span>
+              </a>
+            </li>
+            <li>
+              <a href="/profile">
+                <i class="fa fa-user"></i> <span>Profile</span>
+              </a>
+              <hr>
+            </li>
+            <li>
+              <a href="/stats">
+                <i class="fa fa-area-chart"></i> <span>Stats</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fa fa-calendar"></i> <span>Schedule</span>
+                <i class="fa fa-gear"></i> <span>Settings</span>
               </a>
             </li>
           </ul>
