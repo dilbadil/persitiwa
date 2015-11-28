@@ -6,10 +6,10 @@
 @section('user_fullname', $twitterAccount->name)
 @section('user_username', "@". $twitterAccount->screen_name)
 @section('user_description', $twitterAccount->description)
-@section('breadcrumb')
+<!-- @section('breadcrumb')
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
     <li class="active">Dashboard</li>
-@endsection
+@endsection -->
 
 @section('content')
     @if (session('message'))
@@ -78,7 +78,6 @@
           </div><!-- /.box -->
         </div><!-- /.col -->
         
-      <div class="pop_up_tweet"></div>
         
         <div class="col-md-9">
           <div class="nav-tabs-custom">
@@ -90,18 +89,6 @@
                 <!-- Post -->
                 <div class="post">
                 <div id="map" style="overflow-x: scroll !important;"></div> 
-
-                    <!-- <form class="form-horizontal" method="POST" action="{{ route('twitter_status_update') }}">
-                        {!! csrf_field() !!}
-                        <div class="form-group margin-bottom-none">
-                          <div class="col-sm-9">
-                            <input name="status" class="form-control input-sm" placeholder="Status">
-                          </div>                          
-                          <div class="col-sm-3">
-                            <button type="submit" class="btn btn-danger pull-right btn-block btn-sm">Update</button>
-                          </div>                          
-                        </div>                        
-                    </form> -->
                 </div><!-- /.post -->
               </div><!-- /.tab-pane -->
             </div><!-- /.tab-content -->
