@@ -18,27 +18,27 @@ $(function () {
     datasets: [
       {
         label: "Penebangan Liar",
-        fillColor: "rgba(210, 214, 222, 1)",
-        strokeColor: "rgba(210, 214, 222, 1)",
-        pointColor: "rgba(210, 214, 222, 1)",
-        pointStrokeColor: "#c1c7d1",
+        fillColor: "#16a085",
+        strokeColor: "#16a085",
+        pointColor: "#16a085",
+        pointStrokeColor: "#16a085",
         pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(220,220,220,1)",
+        pointHighlightStroke: "#16a085",
         data: [91, 70, 40, 88, 36, 10, 41]
       },
       {
         label: "Dukungan Masyrakat",
-        fillColor: "rgba(60,141,188,0.9)",
-        strokeColor: "rgba(60,141,188,0.8)",
-        pointColor: "#3b8bba",
-        pointStrokeColor: "rgba(60,141,188,1)",
+        fillColor: "#d35400",
+        strokeColor: "#d35400",
+        pointColor: "#d35400",
+        pointStrokeColor: "#d35400",
         pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(60,141,188,1)",
+        pointHighlightStroke: "#d35400",
         data: [28, 48, 40, 19, 86, 27, 90]
       },
       {
         label: "Digital Goods",
-        fillColor: "yellow",
+        fillColor: "#3498db",
         strokeColor: "rgba(60,141,188,0.8)",
         pointColor: "#3b8bba",
         pointStrokeColor: "rgba(60,141,188,1)",
@@ -48,7 +48,7 @@ $(function () {
       },
       {
         label: "Digital Goods",
-        fillColor: "red",
+        fillColor: "#c0392b",
         strokeColor: "rgba(60,141,188,0.8)",
         pointColor: "#3b8bba",
         pointStrokeColor: "rgba(60,141,188,1)",
@@ -58,7 +58,7 @@ $(function () {
       },
       {
         label: "Digital Goods",
-        fillColor: "purple",
+        fillColor: "#f39c12",
         strokeColor: "rgba(60,141,188,0.8)",
         pointColor: "#3b8bba",
         pointStrokeColor: "rgba(60,141,188,1)",
