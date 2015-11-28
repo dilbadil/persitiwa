@@ -30,6 +30,9 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
+    <link rel="stylesheet" type="text/css" href="css/s2-docs.css">
+    <link rel="stylesheet" type="text/css" href="css/select2.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,7 +55,7 @@
                 </div>
                 <div class="col-sm-3">
                   <button id="close" class="btn btn-warning btn-block btn-sm">Close</button>
-                  <button type="submit" class="btn btn-danger btn-block btn-sm">Update</button>
+                  <button type="submit" class="btn btn-danger btn-block btn-sm">tweet</button>
                 </div>                          
               </div>                        
           </form>
@@ -373,6 +376,7 @@
     <script type="text/javascript" src="javascript/raphael-min.js"></script>
     <!-- // <script type="text/javascript" src="javascript/petaindonesia.js"></script> -->
     <script type="text/javascript" src="javascript/peta_custom.js"></script>
+    <script type="text/javascript" src="javascript/select2.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
