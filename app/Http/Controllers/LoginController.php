@@ -44,7 +44,10 @@ class LoginController extends Controller
         if (! $request->has('oauth_verifier')) return "Access denied !";
 
         $oauthVerifier = $request->input('oauth_verifier');
-        $this->twitterAPI->verifyAccessToken($oauthVerifier);
+        $accessToken = $this->twitterAPI->getAccessToken($oauthVerifier);
+
+        session()->forget('twitter_account');
+        session(['access_token' => $accessToken]);
 
         return redirect('twitter-profile');
     }
