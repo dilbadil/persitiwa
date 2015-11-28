@@ -3326,7 +3326,7 @@ table.text-center th {
 }
 .btn-social > :first-child {
   position: absolute;
-  left: 0;
+  left: 5px;
   top: 0;
   bottom: 0;
   width: 32px;
@@ -4738,7 +4738,7 @@ table.text-center th {
 
 /*custom css*/
 .pop_up_tweet {
-  width: 30%;
+  width: 40%;
   padding: 10px;
   background-color: rgb(247, 246, 247);
   z-index: 9999;
@@ -4769,4 +4769,59 @@ ul.profile-page-detail li {
   padding: 10px;
   background: none;
   margin: 0 7px;
+}
+ul.dropdown-menu.settnav {
+  border-radius: 4px;
+  box-shadow: 0px 2px 16px -3px #000;
+}
+.login-logo h1 {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 41px;
+  margin:0;
+}
+.login-logo p {
+  font-size: 17px;
+  margin-top: 47px;
+  line-height: 21px;
+}
+.login-box-body .social-auth-links a {
+  font-size: 16px;
+  box-shadow:0px 2px 26px -5px #000;
+}
+.pop_up_tweet {
+  box-shadow: 0px 2px 16px -3px #000;
+}
+.pop_up_tweet h3.title {
+      margin-bottom: 12px;
+}
+.pop_up_tweet .form-group textarea {
+  height: 87px;
+}
+.pop_up_tweet .form-group ul.button-group-popup {
+  text-align: right;
+}
+.pop_up_tweet .form-group ul.button-group-popup li{
+  list-style: none;
+  display: inline-block;
+}
+.pop_up_tweet .form-group ul.button-group-popup li button {
+  padding: 5px 17px;
+}
+.pop_up_tweet .form-group ul.button-group-popup li button#close {
+  background-color: #fff;
+  box-shadow: 0px 2px 12px -3px #000;
+}
+.pop_up_tweet .form-group ul.button-group-popup li button#close:hover {
+  box-shadow: 0px 2px 15px -3px #000;
+}
+.pop_up_tweet .form-group ul.button-group-popup li button.tweet {
+  background-color: #27ae60;
+  color: #fff;
+  box-shadow: 0px 2px 12px -3px #000;
+  margin-left: 5px;
+}
+.pop_up_tweet .form-group ul.button-group-popup li button.tweet:hover {
+  background-color: rgba(39, 174, 96, 0.74);
+  box-shadow: 0px 2px 15px -3px #000;
 }
