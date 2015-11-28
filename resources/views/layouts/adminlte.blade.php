@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Laraworld | @yield('title')</title>
+    <title>Peristiwa | @yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -13,10 +13,10 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="adminlte/dist/css/AdminLTE.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="adminlte/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="adminlte/dist/css/skins/_all-skins.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="adminlte/plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
@@ -36,19 +36,31 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
+  <!-- POP UP -->
+  <div class="pop_up_background">
+        <div class="pop_up_tweet">
+          <h3>Tweet Baru</h3>
+            <form class="form-horizontal" method="POST" action="{{ route('twitter_status_update') }}">
+              {!! csrf_field() !!}
+              <div class="form-group margin-bottom-none">
+                <div class="col-sm-9">
+                  <input name="status" class="form-control input-sm" placeholder="Status"><br>
+                  <input name="haystack" class="form-control input-sm" placeholder="haystack">
+                </div>
+                <div class="col-sm-3">
+                  <button id="close" class="btn btn-warning btn-block btn-sm">Close</button>
+                  <button type="submit" class="btn btn-danger btn-block btn-sm">Update</button>
+                </div>                          
+              </div>                        
+          </form>
+        </div>
+  </div>
     <div class="wrapper">
 
       <header class="main-header">
-        <!-- Logo -->
-        <a href="index2.html" class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Admin</b>LTE</span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -60,7 +72,7 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="@yield('user_image')" class="user-image" alt="User Image">
-                  <span class="hidden-xs">@yield('user_fullname')</span>
+                  <span class="hidden-xs">@yield('user_fullname') <i class="fa fa-angle-down" style="margin-left:7px;font-size:15px;"></i></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
@@ -86,7 +98,7 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      <a href="/profile" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
                       <a href="{{ route('logout_path') }}" class="btn btn-default btn-flat">Sign out</a>
@@ -95,9 +107,9 @@
                 </ul>
               </li>
               <!-- Control Sidebar Toggle Button -->
-              <li>
+              <!-- <li>
                 <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </nav>
@@ -107,15 +119,18 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class="pull-left image">
-              <img src="@yield('user_image')" class="img-circle" alt="User Image">
+          <div class="user-panel" style="background-image:url('{{asset('image/userbackground.jpg')}}');background-size:100%;background-repeat:no-repeat;">
+            <div class="userpanel-wrap">
+              <div class=" image" style="padding-left:15px;">
+                <img src="@yield('user_image')" class="img-circle" alt="User Image">
+              </div>
+              <div class=" info">
+                <p style="color:#fff;margin-bottom:0;">@yield('user_fullname')</p>
+                <p class="text-muted" style="color:#fff;font-size:11px;">{{ "@" . $twitterAccount->screen_name }}</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+              </div>
             </div>
-            <div class="pull-left info">
-              <p>@yield('user_fullname')</p>
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
-          </div>
+          </div><!--end-user-panel-->
           <!-- search form -->
           <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
@@ -128,15 +143,31 @@
           <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
+            <!-- <li class="header">MAIN NAVIGATION</li> -->
             <li class="active">
-              <a href="#">
+              <a href="/twitter-profile">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
             </li>
             <li>
-              <a href="#">
-                <i class="fa fa-calendar"></i> <span>Schedule</span>
+              <a href="/profile">
+                <i class="fa fa-user"></i> <span>Profile</span>
+              </a>
+              <hr>
+            </li>
+            <li>
+              <a href="/stats">
+                <i class="fa fa-area-chart"></i> <span>Stats</span>
+              </a>
+            </li>
+            <li>
+              <a href="/settings">
+                <i class="fa fa-gear"></i> <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <a href="/help">
+                <i class="fa fa-question-circle"></i> <span>Help</span>
               </a>
             </li>
           </ul>
@@ -164,9 +195,9 @@
       </div><!-- /.content-wrapper -->
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
+          <b>Version</b> Beta
         </div>
-        <strong>Copyright &copy; {{ date('Y') }} <a href="http://github.com/dilbadil">Dilbadil</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; {{ date('Y') }} <a href="http://github.com/dilbadil">Peristiwa</a>.</strong> All rights reserved.
       </footer>
 
       <!-- Control Sidebar -->
@@ -338,6 +369,10 @@
 
     <!-- jQuery 2.1.4 -->
     <script src="adminlte/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+       <!-- custom by wida -->
+    <script type="text/javascript" src="javascript/raphael-min.js"></script>
+    <!-- // <script type="text/javascript" src="javascript/petaindonesia.js"></script> -->
+    <script type="text/javascript" src="javascript/peta_custom.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -373,5 +408,7 @@
     <script src="adminlte/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="adminlte/dist/js/demo.js"></script>
+
+ 
   </body>
 </html>

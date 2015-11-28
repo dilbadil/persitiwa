@@ -1,15 +1,16 @@
+
 @extends('layouts.adminlte')
 
-@section('title', 'Dashboard')
+@section('title', 'Profile')
 
 @section('user_image', $twitterAccount->profile_image_url)
 @section('user_fullname', $twitterAccount->name)
 @section('user_username', "@". $twitterAccount->screen_name)
 @section('user_description', $twitterAccount->description)
-<!-- @section('breadcrumb')
+@section('breadcrumb')
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Dashboard</li>
-@endsection -->
+    <li class="active">Profile</li>
+@endsection
 
 @section('content')
     @if (session('message'))
@@ -29,24 +30,27 @@
     @endif
 
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-12">
 
           <!-- Profile Image -->
           <div class="box box-primary">
-            <div class="box-body box-profile">
+            <div class="box-body box-profile" style="background-image:url('{{asset('image/profilebackground.jpg')}}');background-size:100%;background-repeat:no-repeat;background-position:center;color:#fff;">
               <img class="profile-user-img img-responsive img-circle" src="{{ $twitterAccount->profile_image_url }}" alt="User profile picture">
               <h3 class="profile-username text-center">{{ $twitterAccount->name }}</h3>
               <p class="text-muted text-center">{{ "@" . $twitterAccount->screen_name }}</p>
 
-              <ul class="list-group list-group-unbordered">
+              <ul class="list-group list-group-unbordered profile-page-detail">
                 <li class="list-group-item">
-                  <b>Tweets</b> <a class="pull-right">{{ $twitterAccount->statuses_count }}</a>
+                  <span>Tweets</span> 
+                  <a class="" style="font-weight:bold;color:#fff;">{{ $twitterAccount->statuses_count }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Followers</b> <a class="pull-right">{{ $twitterAccount->followers_count }}</a>
+                  <span>Followers</span> 
+                  <a class="" style="font-weight:bold;color:#fff;">{{ $twitterAccount->followers_count }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Following</b> <a class="pull-right">{{ $twitterAccount->friends_count }}</a>
+                  <span>Following</span> 
+                  <a class="" style="font-weight:bold;color:#fff;">{{ $twitterAccount->friends_count }}</a>
                 </li>
               </ul>
             </div><!-- /.box-body -->
@@ -73,26 +77,24 @@
               <p class="text-muted">
                 {{ $twitterAccount->location }}
               </p>
+
               <hr>
+
+                <!--
+              <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+              <p>
+                <span class="label label-danger">UI Design</span>
+                <span class="label label-success">Coding</span>
+                <span class="label label-info">Javascript</span>
+                <span class="label label-warning">PHP</span>
+                <span class="label label-primary">Node.js</span>
+              </p>
+
+              <hr>
+            -->
             </div><!-- /.box-body -->
           </div><!-- /.box -->
         </div><!-- /.col -->
-        
-        
-        <div class="col-md-9">
-          <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#activity" data-toggle="tab">Tweet dengan klik daerah</a></li>
-            </ul>
-            <div class="tab-content">
-              <div class="active tab-pane" id="activity">
-                <!-- Post -->
-                <div class="post">
-                <div id="map" style="overflow-x: scroll !important;"></div> 
-                </div><!-- /.post -->
-              </div><!-- /.tab-pane -->
-            </div><!-- /.tab-content -->
-          </div><!-- /.nav-tabs-custom -->
-        </div><!-- /.col -->
     </div>
+
 @endsection

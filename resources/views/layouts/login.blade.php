@@ -24,7 +24,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="hold-transition login-page">
+  <body class="hold-transition login-page ">
     <div class="login-box">
       <div class="login-logo">
         <h1>

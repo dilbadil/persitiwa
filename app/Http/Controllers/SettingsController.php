@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -8,9 +7,11 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Libs\TwitterAPI;
 
-class PagesContrller extends Controller
+
+class SettingsController extends Controller
 {
-    /**
+
+	    /**
      * @var TwitterAPI
      */
     protected $twitterAPI;
@@ -26,20 +27,18 @@ class PagesContrller extends Controller
         $this->twitterAPI = $twitterAPI;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function profile()
-    {
-        if (! session()->has('twitter_account')) {
+	public function profile () {
+		if (! session()->has('twitter_account')) {
             $twitterAccount = $this->twitterAPI->getAccount();
             session(['twitter_account' => $twitterAccount]);
         }
 
         $twitterAccount = session('twitter_account');
 
-        return view('twitter.index', compact('twitterAccount'));
-    }
+        // return view('twitter.index', compact('twitterAccount'));
+		return view('settings.settings', compact('twitterAccount'));
+	}
+
 }
+
+?>
