@@ -14,34 +14,9 @@ Route::get('/', function() {
     return "hello world";
 });
 
-Route::get('/twitter-login-callback', ['as' => 'twitter_signin_callback', function(Illuminate\Http\Request $request) {
-    
-    if (! $request->has('oauth_verifier')) return "Access denied !";
+Route::get('/twitter-login-callback', ['as' => 'twitter_signin_callback', 'uses' => 'LoginController@signInCallback']);
 
-    $oauthVerifier = $request->input('oauth_verifier');
-    $connection = new Abraham\TwitterOAuth\TwitterOAuth(env('TWITTER_CONSUMER_KEY'), env('TWITTER_CONSUMER_SECRET'), session('oauth_token'), session('oauth_token_secret'));
-    $accessToken = $connection->oauth("oauth/access_token", array("oauth_verifier" => $oauthVerifier));
-
-    session()->forget('twitter_account');
-    session(['access_token' => $accessToken]);
-
-    return redirect('twitter-profile');
-}]);
-
-Route::get('/login', ['as' => 'login_path', function(Illuminate\Http\Request $request) {
-
-    $connection = new Abraham\TwitterOAuth\TwitterOAuth( env('TWITTER_CONSUMER_KEY'), env('TWITTER_CONSUMER_SECRET') );
-    $requestToken = $connection->oauth('oauth/request_token', array('oauth_callback' => route('twitter_signin_callback')));
-
-    session([
-        'oauth_token' => $requestToken['oauth_token'],
-        'oauth_token_secret' => $requestToken['oauth_token_secret']
-    ]);
-
-    $urlTwitter = $connection->url('oauth/authenticate', ['oauth_token' => session('oauth_token')]);
-
-    return view('layouts.login', compact('urlTwitter'));
-}]);
+Route::get('/login', ['as' => 'login_path', 'uses' => 'LoginController@index']);
 
 Route::get('/twitter-profile', function(Illuminate\Http\Request $request) {
     $accessToken = session('access_token');
@@ -72,28 +47,4 @@ Route::post('/twitter-status', ['as' => 'twitter_status_update', function(Illumi
         ->with('success', false);
 }]);
 
-Route::post('/twitter-send-message', ['as' => 'twitter_send_message', function(Illuminate\Http\Request $request){
-    $connection = new Abraham\TwitterOAuth\TwitterOAuth(env('TWITTER_CONSUMER_KEY'), env('TWITTER_CONSUMER_SECRET'), session('access_token.oauth_token'), session('access_token.oauth_token_secret'));
-    $fields =  [
-        'message' => $request->input('message'),
-        'to' => $request->input('to'),
-    ];
-    $request = $connection->post("direct_messages/new", $fields);
-
-    if ($connection->getLastHttpCode() == 200) {
-        return redirect('twitter-profile')
-            ->with('message', "Message sent to @" . $request->input('to'))
-            ->with('success', true);
-    }
-
-    return redirect('twitter-profile')
-        ->with('message', "Send message failed!")
-        ->with('success', false);
-}]);
-
-Route::get('/logout', ['as' => 'logout_path', function(Illuminate\Http\Request $request){
-    session()->forget('twitter_account');
-    session()->forget('access_token');
-
-    return redirect(route('login_path'));
-}]);
+Route::get('/logout', ['as' => 'logout_path', 'uses' => 'LoginController@logout']);
