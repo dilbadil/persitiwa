@@ -4826,3 +4826,24 @@ ul.dropdown-menu.settnav {
   background-color: rgba(39, 174, 96, 0.74);
   box-shadow: 0px 2px 12px -3px #000;
 }
+.peristiwa-kita .post .tweets {
+  padding-left: 0;
+}
+.peristiwa-kita .post .tweets .tweet {
+  text-align: left;
+  border-bottom: 1px solid #999;
+  margin-bottom: 4px;
+  padding: 10px;
+  list-style: none;
+}
+.peristiwa-kita .post .tweets .tweet:last-child {
+  border-bottom: none;
+}
+.peristiwa-kita .post .tweets .tweet .head-tweet .username {
+  position: relative;
+  top: -49px;
+  left: 55px;
+}
+.peristiwa-kita .post .tweets .tweet .content-tweet {
+  margin-top: -49px;
+}
