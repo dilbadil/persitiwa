@@ -1,0 +1,23 @@
+{
+  "name": "peristiwa",
+  "authors": [
+    "widastarry <wida.skydev@gmail.com>"
+  ],
+  "description": "manage application dependencies",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "www.ulatbulu.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "font-awesome": "fontawesome#~4.5.0",
+    "bootstrap": "~3.3.6"
+  }
+}
