@@ -10,6 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/', function() {
+    return "hello world";
+});
 
 Route::get('/twitter-login-callback', ['as' => 'twitter_signin_callback', function(Illuminate\Http\Request $request) {
     
