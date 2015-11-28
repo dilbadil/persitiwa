@@ -131,7 +131,7 @@
           <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
+            <!-- <li class="header">MAIN NAVIGATION</li> -->
             <li class="active">
               <a href="/twitter-profile">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -149,8 +149,13 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/settings">
                 <i class="fa fa-gear"></i> <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <a href="/help">
+                <i class="fa fa-question-circle"></i> <span>Help</span>
               </a>
             </li>
           </ul>

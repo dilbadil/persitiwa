@@ -1,6 +1,6 @@
 @extends('layouts.adminlte')
 
-@section('title', 'Stats')
+@section('title', 'settings')
 
 @section('user_image', $twitterAccount->profile_image_url)
 @section('user_fullname', $twitterAccount->name)
@@ -8,5 +8,5 @@
 @section('user_description', $twitterAccount->description)
 @section('breadcrumb')
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Stats</li>
+    <li class="active">Settings</li>
 @endsection
