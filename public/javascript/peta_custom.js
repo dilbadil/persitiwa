@@ -17,4 +17,7 @@
             $('.pop_up_tweet').fadeOut('slow');
           });
         });
+
+
+
       });
