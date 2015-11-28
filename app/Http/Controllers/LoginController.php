@@ -28,6 +28,10 @@ class LoginController extends Controller
      */
     public function index()
     {
+        // Always delete oauth_token
+        session()->forget('oauth_token');
+        session()->forget('oauth_token_secret');
+
         $urlTwitter = $this->twitterAPI->requestToken( route('twitter_signin_callback') );
 
         return view('layouts.login', compact('urlTwitter'));
