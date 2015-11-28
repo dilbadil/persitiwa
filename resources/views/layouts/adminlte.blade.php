@@ -30,8 +30,8 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-    <link rel="stylesheet" type="text/css" href="css/s2-docs.css">
     <link rel="stylesheet" type="text/css" href="css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/s2-docs.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,11 +51,20 @@
               <div class="form-group margin-bottom-none">
                 <div class="col-sm-12">
                   <textarea name="status" class="form-control input-sm" placeholder="Apa yang terjadi?"></textarea><br>
+ 
+                  <input type="hidden" name="location_id">
                   <div class="row">
-                    <div class="col-md-6">
-                      <input name="haystack" class="form-control input-sm pull-left" placeholder="#">
+                  <div class="col-md-7">
+                      <!-- <input name="haystack" class="form-control input-sm pull-left" placeholder="#"> -->
+                  <select class="js-multiple" multiple="multiple" style="width:100%" placeholder="haystack">
+                    <option value="kebakaran">Kebakaran</option>
+                    <option value="response_plus">Response Pemerintah (+)</option>
+                    <option value="response_min">Response Pemerintah (-)</option>
+                    <option value="penebangan">Penebangan Liar</option>
+                    <option value="dukungan">Dukungan Masyarakat</option>
+                  </select>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                       <ul class="button-group-popup">
                         <li>
                           <button id="close" class="btn btn-default">Close</button>
@@ -387,6 +396,11 @@
     <!-- // <script type="text/javascript" src="javascript/petaindonesia.js"></script> -->
     <script type="text/javascript" src="javascript/peta_custom.js"></script>
     <script type="text/javascript" src="javascript/select2.js"></script>
+    <script type="text/javascript" src="javascript/pretty.min.js"></script>
+    <script type="text/javascript" src="javascript/anchor.min.js"></script>
+    <script type="text/javascript">
+        $(".js-multiple").select2();
+    </script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
