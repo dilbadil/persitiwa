@@ -27,3 +27,5 @@ Route::get('/logout', [
  ]);
 Route::get('/profile', 'ProfileController@profile');
 Route::get('/stats', 'StatsController@profile');
+Route::get('/settings', 'SettingsController@profile');
+Route::get('/help', 'HelpController@profile');

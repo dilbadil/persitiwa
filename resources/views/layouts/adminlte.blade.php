@@ -13,10 +13,10 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="adminlte/dist/css/AdminLTE.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="adminlte/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="adminlte/dist/css/skins/_all-skins.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="adminlte/plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
@@ -132,10 +132,10 @@
           <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
+            <!-- <li class="header">MAIN NAVIGATION</li> -->
             <li class="active">
               <a href="/twitter-profile">
-                <i class="fa fa-dashboard"></i> <span>Beranda</span>
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
             </li>
             <li>
@@ -150,8 +150,13 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/settings">
                 <i class="fa fa-gear"></i> <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <a href="/help">
+                <i class="fa fa-question-circle"></i> <span>Help</span>
               </a>
             </li>
           </ul>
