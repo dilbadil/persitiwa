@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Laraworld | @yield('title')</title>
+    <title>Peristiwa | @yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -39,17 +39,28 @@
 
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
+  <!-- POP UP -->
+  <div class="pop_up_background">
+        <div class="pop_up_tweet">
+          <h3>Tweet Baru</h3>
+            <form class="form-horizontal" method="POST" action="{{ route('twitter_status_update') }}">
+              {!! csrf_field() !!}
+              <div class="form-group margin-bottom-none">
+                <div class="col-sm-9">
+                  <input name="status" class="form-control input-sm" placeholder="Status"><br>
+                  <input name="haystack" class="form-control input-sm" placeholder="haystack">
+                </div>
+                <div class="col-sm-3">
+                  <button id="close" class="btn btn-warning btn-block btn-sm">Close</button>
+                  <button type="submit" class="btn btn-danger btn-block btn-sm">Update</button>
+                </div>                          
+              </div>                        
+          </form>
+        </div>
+  </div>
     <div class="wrapper">
 
       <header class="main-header">
-        <!-- Logo -->
-        <!-- <a href="index2.html" class="logo"> -->
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <!-- <span class="logo-mini"><b>A</b>LT</span> -->
-          <!-- logo for regular state and mobile devices -->
-          <!-- <span class="logo-lg"><b>Admin</b>LTE</span> -->
-        <!-- </a> -->
-        <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
