@@ -1,14 +1,14 @@
-## Laraworld
+## Peristiwa
 
-Laraworld is basic on laravel framework. It contains my demo with laravel and php.
+Peristiwa is basic on laravel framework. It is an aspiration app.
 
 ## Official Documentation
 
-Documentation for the Laraworld can be found on the [Laraworld repository](http://github.com/dilbadil/laraworld).
+Documentation for the peristiwa can be found on the [peristiwa repository](http://github.com/dilbadil/peristiwa).
 
 ## Contributing
 
-Thank you for considering contributing to the Laraworld.
+Thank you for considering contributing to the peristiwa.
 
 ### License
 
