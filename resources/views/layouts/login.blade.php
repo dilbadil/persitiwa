@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Laraworld | Log in</title>
+    <title>Peristiwa | Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -32,7 +32,7 @@
         </h1>
         <p>Lindungi "HUTAN" dengan tweetmu!</p>
         <span style="font-size:15px;">Laporkan kerusakan hutan dengan cara tweet, Kamu juga bisa menanggapi dan mendukung pemerintah dalam menangani kerusakan hutan yang tengah terjadi di indonesia.
-        Dengan keaktifanmu, secara tidak langsung kamu telah membantu dan mendorong pemerintah unutk mengambil keputusan.
+        Dengan keaktifanmu, secara tidak langsung kamu telah membantu dan mendorong pemerintah untuk mengambil keputusan.
         </span>
       </div><!-- /.login-logo -->
       <div class="login-box-body">

@@ -80,10 +80,12 @@ class TwitterAPI {
     public function updateStatus($statusText)
     {
         $connection = $this->getConnection();
-        $statuses = $connection->post("statuses/update", ["status" => $statusText]);
+        $connection->post("statuses/update", ["status" => $statusText]);
+        $data = $connection->getLastBody();
         $result = [
             'status' => 'failed',
-            'error' => true
+            'error' => true,
+            'data' => $data
         ];
 
         if ($connection->getLastHttpCode() == 200) {
