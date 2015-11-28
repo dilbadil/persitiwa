@@ -14,7 +14,7 @@ Route::get('/login', [
     'uses' => 'LoginController@index'
 ]);
 
-Route::get('/twitter-profile', 'PagesContrller@profile');
+Route::get('/twitter-profile', 'PagesController@profile');
 
 Route::post('/twitter-status', [
     'as' => 'twitter_status_update',
@@ -25,3 +25,5 @@ Route::get('/logout', [
     'as' => 'logout_path',
     'uses' => 'LoginController@logout'
  ]);
+Route::get('/profile', 'ProfileController@profile');
+Route::get('/stats', 'StatsController@profile');

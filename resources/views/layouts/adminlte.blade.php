@@ -133,18 +133,18 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active">
-              <a href="#">
+              <a href="/twitter-profile">
                 <i class="fa fa-dashboard"></i> <span>Beranda</span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/profile">
                 <i class="fa fa-user"></i> <span>Profile</span>
               </a>
               <hr>
             </li>
             <li>
-              <a href="#">
+              <a href="/stats">
                 <i class="fa fa-area-chart"></i> <span>Stats</span>
               </a>
             </li>

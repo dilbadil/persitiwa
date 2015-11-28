@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Libs\TwitterAPI;
 
-class PagesContrller extends Controller
+class PagesController extends Controller
 {
     /**
      * @var TwitterAPI
