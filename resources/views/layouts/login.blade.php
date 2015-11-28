@@ -13,7 +13,7 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="adminlte/dist/css/AdminLTE.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="adminlte/plugins/iCheck/square/blue.css">
 
@@ -27,43 +27,18 @@
   <body class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href=""><b>Lara</b>world</a>
+        <h1>
+          <a href=""><b>Peristiwa</b></a>
+        </h1>
+        <p>Kritisi kebakaran "HUTAN" dengan akun twittermu!</p>
+        <span style="font-size:15px;">Laporkan kebakaran hutan dengan cara tweet, Kamu juga bisa menanggapi dan mendukung pemerintah dalam menangani kebakaran hutan yang tengah terjadi di indonesia.
+        Dengan keaktifanmu, secara tidak langsung kamu telah membantu dan mendorong pemerintah unutk mengambil keputusan.
+        </span>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
-        <form action="" method="post">
-          <div class="form-group has-feedback">
-            <input type="email" class="form-control" placeholder="Email">
-            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-          </div>
-          <div class="form-group has-feedback">
-            <input type="password" class="form-control" placeholder="Password">
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-          </div>
-          <div class="row">
-            <div class="col-xs-8">
-              <div class="checkbox icheck">
-                <label>
-                  <input type="checkbox"> Remember Me
-                </label>
-              </div>
-            </div><!-- /.col -->
-            <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-            </div><!-- /.col -->
-          </div>
-        </form>
-
         <div class="social-auth-links text-center">
-          <p>- OR -</p>
-          <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
-          <a href="{{ $urlTwitter }}" class="btn btn-block btn-social btn-twitter btn-flat"><i class="fa fa-twitter"></i> Sign in using Twitter</a>
-          <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
+          <a href="{{ $urlTwitter }}" class="btn btn-block btn-social btn-twitter btn-flat"><i class="fa fa-twitter"></i>Masuk dengan twitter</a>
         </div><!-- /.social-auth-links -->
-
-        <a href="#">I forgot my password</a><br>
-        <a href="#" class="text-center">Register a new membership</a>
-
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
 
