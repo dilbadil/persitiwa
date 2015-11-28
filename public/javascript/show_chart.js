@@ -16,65 +16,57 @@ $(function () {
 
 // $(document).ready(function() {
   var data1 = [
-    {
-      label: "Penebangan Liar",
-      fillColor: "rgba(210, 214, 222, 1)",
-      strokeColor: "rgba(210, 214, 222, 1)",
-      pointColor: "rgba(210, 214, 222, 1)",
-      pointStrokeColor: "#c1c7d1",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(220,220,220,1)",
-      data: [91, 70, 40, 88, 36, 10, 41]
-    },
-    {
-      label: "Dukungan Masyrakat",
-      fillColor: "rgba(60,141,188,0.9)",
-      strokeColor: "rgba(60,141,188,0.8)",
-      pointColor: "#3b8bba",
-      pointStrokeColor: "rgba(60,141,188,1)",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(60,141,188,1)",
-      data: [28, 48, 40, 19, 86, 27, 90]
-    },
-    {
-      label: "Digital Goods",
-      fillColor: "yellow",
-      strokeColor: "rgba(60,141,188,0.8)",
-      pointColor: "#3b8bba",
-      pointStrokeColor: "rgba(60,141,188,1)",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(60,141,188,1)",
-      data: [21, 48, 49, 30, 40, 27, 60]
-    },
-    {
-      label: "Digital Goods",
-      fillColor: "red",
-      strokeColor: "rgba(60,141,188,0.8)",
-      pointColor: "#3b8bba",
-      pointStrokeColor: "rgba(60,141,188,1)",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(60,141,188,1)",
-      data: [78, 18, 40, 29, 66, 57, 10]
-    },
-    {
-      label: "Digital Goods",
-      fillColor: "purple",
-      strokeColor: "rgba(60,141,188,0.8)",
-      pointColor: "#3b8bba",
-      pointStrokeColor: "rgba(60,141,188,1)",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(60,141,188,1)",
-      data: [58, 58, 50, 59, 66, 87, 90]
-    }
-  ];
-
-
-  // function changeData() {
-    
-  // }
-  // $('.provinsi').change(function() {
-
-  // });
+      {
+        label: "Penebangan Liar",
+        fillColor: "#16a085",
+        strokeColor: "#16a085",
+        pointColor: "#16a085",
+        pointStrokeColor: "#16a085",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "#16a085",
+        data: [91, 70, 40, 88, 36, 10, 41]
+      },
+      {
+        label: "Dukungan Masyrakat",
+        fillColor: "#d35400",
+        strokeColor: "#d35400",
+        pointColor: "#d35400",
+        pointStrokeColor: "#d35400",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "#d35400",
+        data: [28, 48, 40, 19, 86, 27, 90]
+      },
+      {
+        label: "Digital Goods",
+        fillColor: "#3498db",
+        strokeColor: "rgba(60,141,188,0.8)",
+        pointColor: "#3b8bba",
+        pointStrokeColor: "rgba(60,141,188,1)",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(60,141,188,1)",
+        data: [21, 48, 49, 30, 40, 27, 60]
+      },
+      {
+        label: "Digital Goods",
+        fillColor: "#c0392b",
+        strokeColor: "rgba(60,141,188,0.8)",
+        pointColor: "#3b8bba",
+        pointStrokeColor: "rgba(60,141,188,1)",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(60,141,188,1)",
+        data: [78, 18, 40, 29, 66, 57, 10]
+      },
+      {
+        label: "Digital Goods",
+        fillColor: "#f39c12",
+        strokeColor: "rgba(60,141,188,0.8)",
+        pointColor: "#3b8bba",
+        pointStrokeColor: "rgba(60,141,188,1)",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(60,141,188,1)",
+        data: [58, 58, 50, 59, 66, 87, 90]
+      }
+    ];
 
   var areaChartData = {
     labels: ["Mei","Juni","Juli","Agustus","September", "Oktober", "November"],
