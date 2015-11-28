@@ -30,6 +30,26 @@
 		      <div class="chart">
 		        <canvas id="barChart" style="height:230px"></canvas>
 		      </div>
+		      <div class="more-detail">
+		      	<span>Keterangan:</span>
+		      	<ul>
+		      		<li>
+		      			<i class="fa fa-circle" style="color:#16a085;"></i><span class="label">Penebangan Liar</span>
+		      		</li>
+		      		<li>
+		      			<i class="fa fa-circle" style="color:#c0392b;"></i><span class="label">Pembakaran Hutan dan Pembukaan Lahan</span>
+		      		</li>
+		      		<li>
+		      			<i class="fa fa-circle" style="color:#3d35400;"></i><span class="label">Dukungan Masyarakat</span>
+		      		</li>
+		      		<li>
+		      			<i class="fa fa-circle" style="color:#3498db;"></i><span class="label">Dukungan Pemerintah</span>
+		      		</li>
+		      		<li>
+		      			<i class="fa fa-circle" style="color:#f39c12;"></i><span class="label">Penilaian Masyarakat</span>
+		      		</li>
+		      	</ul>
+		      </div>
 		    </div><!-- /.box-body -->
 		</div><!-- /.box -->
  	</div>

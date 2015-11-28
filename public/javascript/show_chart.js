@@ -27,6 +27,16 @@ $(function () {
         data: [91, 70, 40, 88, 36, 10, 41]
       },
       {
+        label: "Pembakaran Hutan dan Pembukaan Lahan",
+        fillColor: "#c0392b",
+        strokeColor: "rgba(60,141,188,0.8)",
+        pointColor: "#3b8bba",
+        pointStrokeColor: "rgba(60,141,188,1)",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(60,141,188,1)",
+        data: [78, 18, 40, 29, 66, 57, 10]
+      },
+      {
         label: "Dukungan Masyrakat",
         fillColor: "#d35400",
         strokeColor: "#d35400",
@@ -37,7 +47,7 @@ $(function () {
         data: [28, 48, 40, 19, 86, 27, 90]
       },
       {
-        label: "Digital Goods",
+        label: "Dukungan Pemerintah",
         fillColor: "#3498db",
         strokeColor: "rgba(60,141,188,0.8)",
         pointColor: "#3b8bba",
@@ -47,17 +57,7 @@ $(function () {
         data: [21, 48, 49, 30, 40, 27, 60]
       },
       {
-        label: "Digital Goods",
-        fillColor: "#c0392b",
-        strokeColor: "rgba(60,141,188,0.8)",
-        pointColor: "#3b8bba",
-        pointStrokeColor: "rgba(60,141,188,1)",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(60,141,188,1)",
-        data: [78, 18, 40, 29, 66, 57, 10]
-      },
-      {
-        label: "Digital Goods",
+        label: "Penilaian Masyarakat Terhadap Pemerintah",
         fillColor: "#f39c12",
         strokeColor: "rgba(60,141,188,0.8)",
         pointColor: "#3b8bba",

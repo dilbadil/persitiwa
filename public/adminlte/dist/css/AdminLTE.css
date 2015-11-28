@@ -4850,3 +4850,11 @@ ul.dropdown-menu.settnav {
 section{
   margin-bottom: 0 !important;
 }
+.more-detail ul li {
+  list-style: none;
+  padding-bottom: 5px;
+  margin-bottom: 3px;
+}
+.more-detail ul li span.label{
+  color: #222D32;
+}
