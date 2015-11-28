@@ -45,7 +45,7 @@
   <!-- POP UP -->
   <div class="pop_up_background">
         <div class="pop_up_tweet">
-          <h3 class="title">Tweet di Provinsi ini!</h3>
+          <h3 class="title">Tweet peristiwa di Provinsi ini!</h3>
             <form class="form-horizontal" method="POST" action="{{ route('twitter_status_update') }}">
               {!! csrf_field() !!}
               <div class="form-group margin-bottom-none">
@@ -141,8 +141,8 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
-          <div class="user-panel" style="background-image:url('{{asset('image/userbackground.jpg')}}');background-size:100%;background-repeat:no-repeat;">
-            <div class="userpanel-wrap">
+          <div class="user-panel" style="background-image:url('{{asset('image/userbackground2.jpg')}}');background-size:100%;background-repeat:no-repeat;padding-bottom:61px;">
+            <!-- <div class="userpanel-wrap"> -->
               <div class=" image" style="padding-left:15px;">
                 <img src="@yield('user_image')" class="img-circle" alt="User Image">
               </div>
@@ -151,7 +151,7 @@
                 <p class="text-muted" style="color:#fff;font-size:11px;">{{ "@" . $twitterAccount->screen_name }}</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
               </div>
-            </div>
+            <!-- </div> -->
           </div><!--end-user-panel-->
           <!-- search form -->
           <form action="#" method="get" class="sidebar-form">
