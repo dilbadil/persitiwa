@@ -9,7 +9,7 @@
 @section('breadcrumb')
 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
 <li class="active">Stats</li>
- <select style="width:100%" placeholder="haystack">
+ <select style="width:100%" class="provinsi">
     <option value="kalbar">Kalimantan Barat</option>
     <option value="riau">Riau</option>
   </select>
@@ -17,7 +17,7 @@
 @section('content')
 <!-- BAR CHART -->
  <div class="row">
- 	<div class="col-md-12">
+ 	<div class="col-md-12" style="margin-top:10px;">
 		<div class="box box-success">
 		    <div class="box-header with-border">
 		      <h3 class="box-title">Graphic</h3>

@@ -13,58 +13,68 @@ $(function () {
   // This will get the first returned node in the jQuery collection.
   // var areaChart = new Chart(areaChartCanvas);
 
+
+// $(document).ready(function() {
   var data1 = [
-      {
-        label: "Penebangan Liar",
-        fillColor: "rgba(210, 214, 222, 1)",
-        strokeColor: "rgba(210, 214, 222, 1)",
-        pointColor: "rgba(210, 214, 222, 1)",
-        pointStrokeColor: "#c1c7d1",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(220,220,220,1)",
-        data: [91, 70, 40, 88, 36, 10, 41]
-      },
-      {
-        label: "Dukungan Masyrakat",
-        fillColor: "rgba(60,141,188,0.9)",
-        strokeColor: "rgba(60,141,188,0.8)",
-        pointColor: "#3b8bba",
-        pointStrokeColor: "rgba(60,141,188,1)",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(60,141,188,1)",
-        data: [28, 48, 40, 19, 86, 27, 90]
-      },
-      {
-        label: "Digital Goods",
-        fillColor: "yellow",
-        strokeColor: "rgba(60,141,188,0.8)",
-        pointColor: "#3b8bba",
-        pointStrokeColor: "rgba(60,141,188,1)",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(60,141,188,1)",
-        data: [21, 48, 49, 30, 40, 27, 60]
-      },
-      {
-        label: "Digital Goods",
-        fillColor: "red",
-        strokeColor: "rgba(60,141,188,0.8)",
-        pointColor: "#3b8bba",
-        pointStrokeColor: "rgba(60,141,188,1)",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(60,141,188,1)",
-        data: [78, 18, 40, 29, 66, 57, 10]
-      },
-      {
-        label: "Digital Goods",
-        fillColor: "purple",
-        strokeColor: "rgba(60,141,188,0.8)",
-        pointColor: "#3b8bba",
-        pointStrokeColor: "rgba(60,141,188,1)",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(60,141,188,1)",
-        data: [58, 58, 50, 59, 66, 87, 90]
-      }
-    ];
+    {
+      label: "Penebangan Liar",
+      fillColor: "rgba(210, 214, 222, 1)",
+      strokeColor: "rgba(210, 214, 222, 1)",
+      pointColor: "rgba(210, 214, 222, 1)",
+      pointStrokeColor: "#c1c7d1",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+      data: [91, 70, 40, 88, 36, 10, 41]
+    },
+    {
+      label: "Dukungan Masyrakat",
+      fillColor: "rgba(60,141,188,0.9)",
+      strokeColor: "rgba(60,141,188,0.8)",
+      pointColor: "#3b8bba",
+      pointStrokeColor: "rgba(60,141,188,1)",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(60,141,188,1)",
+      data: [28, 48, 40, 19, 86, 27, 90]
+    },
+    {
+      label: "Digital Goods",
+      fillColor: "yellow",
+      strokeColor: "rgba(60,141,188,0.8)",
+      pointColor: "#3b8bba",
+      pointStrokeColor: "rgba(60,141,188,1)",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(60,141,188,1)",
+      data: [21, 48, 49, 30, 40, 27, 60]
+    },
+    {
+      label: "Digital Goods",
+      fillColor: "red",
+      strokeColor: "rgba(60,141,188,0.8)",
+      pointColor: "#3b8bba",
+      pointStrokeColor: "rgba(60,141,188,1)",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(60,141,188,1)",
+      data: [78, 18, 40, 29, 66, 57, 10]
+    },
+    {
+      label: "Digital Goods",
+      fillColor: "purple",
+      strokeColor: "rgba(60,141,188,0.8)",
+      pointColor: "#3b8bba",
+      pointStrokeColor: "rgba(60,141,188,1)",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(60,141,188,1)",
+      data: [58, 58, 50, 59, 66, 87, 90]
+    }
+  ];
+
+
+  // function changeData() {
+    
+  // }
+  // $('.provinsi').change(function() {
+
+  // });
 
   var areaChartData = {
     labels: ["Mei","Juni","Juli","Agustus","September", "Oktober", "November"],
@@ -110,6 +120,7 @@ $(function () {
     maintainAspectRatio: true
   };
 
-  barChartOptions.datasetFill = false;
-  barChart.Bar(barChartData, barChartOptions);
-});
+    barChartOptions.datasetFill = false;
+    barChart.Bar(barChartData, barChartOptions);
+  });
+// });
