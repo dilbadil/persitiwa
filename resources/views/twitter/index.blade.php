@@ -103,33 +103,21 @@
                 <!-- Post -->
                 <div class="post">
                   <ul class="tweets">
-                    <li class="tweet">
-                      <div class="head-tweet">
-                        <a href=""><img class=" img-responsive img-circle " src="{{ $twitterAccount->profile_image_url }}" alt="User profile picture"></a>
-                        <div class="username">
-                          <span class="profile-username ">{{ $twitterAccount->name }}</span>
-                        <p class="text-muted ">{{ "@" . $twitterAccount->screen_name }}</p>
-                        </div>
-                      </div>
-                      <div class="content-tweet">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nobis, ea expedita culpa magni iusto nostrum. 
-                        Officiis eaque nam quis omnis, inventore iste cum voluptatibus perspiciatis temporibus, nesciunt, vitae quibusdam.</p>
-                      </div>
-                    </li>
-                    <li class="tweet">
-                      <div class="head-tweet">
-                        <a href=""><img class=" img-responsive img-circle " src="{{ $twitterAccount->profile_image_url }}" alt="User profile picture"></a>
-                        <div class="username">
-                          <span class="profile-username ">{{ $twitterAccount->name }}</span>
-                        <p class="text-muted ">{{ "@" . $twitterAccount->screen_name }}</p>
-                        </div>
-                      </div>
-                      <div class="content-tweet">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime excepturi nobis unde magni, 
-                        eaque nesciunt. Mollitia magnam quasi pariatur vero. Eius, nesciunt ducimus quo magnam accusamus 
-                        recusandae doloremque! Atque, ipsa.</p>
-                      </div>
-                    </li>
+                    @foreach($statuses as $status)
+                        <li class="tweet">
+                          <div class="head-tweet">
+                            <a href=""><img class="profile-user-img img-responsive img-circle" src="{{ $status->user->profile_image_url }}" alt="User profile picture"></a>
+                            <div class="username">
+                              <span class="profile-username ">{{ $status->user->username }}</span>
+                            <p class="text-muted ">{{ "@" . $status->user->username }}</p>
+                            </div>
+                          </div>
+                          <div class="content-tweet">
+                            <p>{{ $status->body }}</p>
+                          </div>
+                        </li>
+                    @endforeach
+
                   </ul><!-- end-tweets-->
                 </div><!-- /.post -->
               </div><!-- /.tab-pane -->

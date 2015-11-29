@@ -12,9 +12,16 @@
 */
 
 $factory->define(App\User::class, function ($faker) {
+    $images = [
+        "https://pbs.twimg.com/profile_images/653570941402787840/MYmUlSkS.jpg",
+        "https://pbs.twimg.com/profile_images/661457133695692800/B-CgYlA8.jpg",
+        "https://pbs.twimg.com/profile_images/667129260612546560/2FAjXDyX.jpg",
+        "https://pbs.twimg.com/profile_images/658527492639092736/TEliY1D3.jpg"
+    ];
     return [
         'username' => $faker->userName,
         'account' => 'twitter',
+        'profile_image_url' => $images[array_rand($images)]
     ];
 
 });

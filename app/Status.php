@@ -20,4 +20,12 @@ class Status extends Model
     {
         return $this->belongsToMany('App\Tag');
     }
+
+    /**
+     * A status belongs to user.
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

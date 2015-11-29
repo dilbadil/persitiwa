@@ -1,7 +1,9 @@
 <?php
 
 Route::get('/', function() {
-    return "hello world";
+    if (! session()->has('twitter_account')) return redirect('logout');
+
+    return redirect("dashboard");
 });
 
 Route::get('/twitter-login-callback', [
@@ -14,7 +16,7 @@ Route::get('/login', [
     'uses' => 'LoginController@index'
 ]);
 
-Route::get('/twitter-profile', 'PagesController@profile');
+Route::get('/dashboard', ['as' => 'dashboard_path', 'uses' => 'PagesController@dashboard']);
 
 Route::post('/twitter-status', [
     'as' => 'twitter_status_update',
@@ -25,7 +27,19 @@ Route::get('/logout', [
     'as' => 'logout_path',
     'uses' => 'LoginController@logout'
  ]);
-Route::get('/profile', 'ProfileController@profile');
-Route::get('/stats', 'StatsController@profile');
+
+Route::get('/profile', [
+    'as' => 'profile_path',
+    'uses' => 'ProfileController@profile'
+]);
+
+Route::get('/stats', [
+    'as' => 'stats_path',
+    'uses' => 'StatsController@profile',
+]);
 Route::get('/settings', 'SettingsController@profile');
-Route::get('/help', 'HelpController@profile');
+
+Route::get('/help', [
+    'as' => 'help_path',
+    'uses' => 'HelpController@profile'
+]);

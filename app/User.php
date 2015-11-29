@@ -25,4 +25,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $fillable = ['username', 'account'];
+
+    /**
+     * User has many status.
+     */
+    public function statuses()
+    {
+        return $this->hasMany('App\Status');
+    }
 }

@@ -72,13 +72,13 @@ class LoginController extends Controller
                 'username' => $twitterUsername,
                 'account' => 'twitter'
             ]);
-            session(['user_id' => $user->id]);
         }
 
+        session(['user_id' => $user->id]);
         session()->forget('twitter_account');
         session(['access_token' => $accessToken]);
 
-        return redirect('twitter-profile');
+        return redirect('dashboard');
     }
 
     /**

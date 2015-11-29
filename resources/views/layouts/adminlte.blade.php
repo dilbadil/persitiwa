@@ -167,7 +167,7 @@
           <ul class="sidebar-menu">
             <!-- <li class="header">MAIN NAVIGATION</li> -->
             <li class="active">
-              <a href="/twitter-profile">
+              <a href="/dashboard">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
             </li>
@@ -180,11 +180,6 @@
             <li>
               <a href="/stats">
                 <i class="fa fa-area-chart"></i> <span>Stats</span>
-              </a>
-            </li>
-            <li>
-              <a href="/settings">
-                <i class="fa fa-gear"></i> <span>Settings</span>
               </a>
             </li>
             <li>

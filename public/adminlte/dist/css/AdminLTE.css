@@ -3285,7 +3285,7 @@ table.text-center th {
  * -------------
  */
 .profile-user-img {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 100px;
   padding: 3px;
   border: 3px solid #d2d6de;
@@ -4841,8 +4841,8 @@ ul.dropdown-menu.settnav {
 }
 .peristiwa-kita .post .tweets .tweet .head-tweet .username {
   position: relative;
-  top: -49px;
-  left: 55px;
+  top: -90px;
+  left: 115px;
 }
 .peristiwa-kita .post .tweets .tweet .content-tweet {
   margin-top: -49px;

@@ -57,12 +57,12 @@ class TwitterController extends Controller
             ]);
             
             // Redirect
-            return redirect('twitter-profile')
+            return redirect('dashboard')
                 ->with("message", "Update status success!")
                 ->with("success", true);
         }
 
-        return redirect('twitter-profile')
+        return redirect('dashboard')
             ->with('message', 'Error: can"t update status')
             ->with('success', false);
     }
