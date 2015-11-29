@@ -6,9 +6,13 @@ Peristiwa is basic on laravel framework. It is an aspiration app.
 
 Documentation for the peristiwa can be found on the [peristiwa repository](http://github.com/dilbadil/peristiwa).
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the peristiwa.
+1. clone repo peristiwa di https://github.com/dilbadil/persitiwa.git
+2. jalankan "composer install"
+3. copy file .env.example menjadi .env
+4. jalankan "php artisan migrate"
+5. jalankan "php artisan db:seed"
 
 ### License
 

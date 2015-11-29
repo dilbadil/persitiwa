@@ -486,10 +486,10 @@ a:focus {
   height: auto;
 }
 .user-panel > .info {
-  padding: 5px 5px 5px 15px;
+  padding: 5px 5px 5px 0px;
   line-height: 1;
   position: absolute;
-  left: 55px;
+  left: 28px;
 }
 .user-panel > .info > p {
   font-weight: 600;
@@ -4846,4 +4846,15 @@ ul.dropdown-menu.settnav {
 }
 .peristiwa-kita .post .tweets .tweet .content-tweet {
   margin-top: -49px;
+}
+section{
+  margin-bottom: 0 !important;
+}
+.more-detail ul li {
+  list-style: none;
+  padding-bottom: 5px;
+  margin-bottom: 3px;
+}
+.more-detail ul li span.label{
+  color: #222D32;
 }
