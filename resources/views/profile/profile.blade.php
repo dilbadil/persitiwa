@@ -79,6 +79,26 @@
               </p>
 
               <hr>
+                <!-- Post -->
+                <div class="post">
+                  <ul class="tweets">
+                    @foreach($statuses as $status)
+                        <li class="tweet">
+                          <div class="head-tweet">
+                            <a href=""><img class="profile-user-img img-responsive img-circle" src="{{ $status->user->profile_image_url }}" alt="User profile picture"></a>
+                            <div class="username">
+                              <span class="profile-username ">{{ $status->user->username }}</span>
+                            <p class="text-muted ">{{ "@" . $status->user->username }}</p>
+                            </div>
+                          </div>
+                          <div class="content-tweet">
+                            <p>{{ $status->body }}</p>
+                          </div>
+                        </li>
+                    @endforeach
+
+                  </ul><!-- end-tweets-->
+                </div><!-- /.post -->
 
                 <!--
               <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>

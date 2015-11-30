@@ -6,12 +6,16 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Libs\TwitterAPI;
-
+use App\Status;
 
 class ProfileController extends Controller
 {
+    /**
+     * @var Status
+     */
+    protected $status;
 
-	    /**
+    /**
      * @var TwitterAPI
      */
     protected $twitterAPI;
@@ -20,11 +24,13 @@ class ProfileController extends Controller
      * Instance of controller.
      *
      * @param TwitterAPI $twitterAPI
+     * @param Status $status
      * @return void
      */
-    public function __construct(TwitterAPI $twitterAPI)
+    public function __construct(TwitterAPI $twitterAPI, Status $status)
     {
         $this->twitterAPI = $twitterAPI;
+        $this->status = $status;
     }
 
 	public function profile () {
@@ -34,9 +40,9 @@ class ProfileController extends Controller
         }
 
         $twitterAccount = session('twitter_account');
+        $statuses = $this->status->whereUserId(session('user_id'))->get();
 
-        // return view('twitter.index', compact('twitterAccount'));
-		return view('profile.profile', compact('twitterAccount'));
+		return view('profile.profile', compact('twitterAccount', 'statuses'));
 	}
 
 }

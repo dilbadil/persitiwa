@@ -16,7 +16,10 @@ Route::get('/login', [
     'uses' => 'LoginController@index'
 ]);
 
-Route::get('/dashboard', ['as' => 'dashboard_path', 'uses' => 'PagesController@dashboard']);
+Route::get('/dashboard', [
+    'as' => 'dashboard_path',
+    'uses' => 'PagesController@dashboard'
+]);
 
 Route::post('/twitter-status', [
     'as' => 'twitter_status_update',
@@ -37,7 +40,6 @@ Route::get('/stats', [
     'as' => 'stats_path',
     'uses' => 'StatsController@profile',
 ]);
-Route::get('/settings', 'SettingsController@profile');
 
 Route::get('/help', [
     'as' => 'help_path',

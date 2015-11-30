@@ -166,23 +166,23 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <!-- <li class="header">MAIN NAVIGATION</li> -->
-            <li class="active">
+            <li class="{{ Route::currentRouteName() == 'dashboard_path' ? 'active' : null }}">
               <a href="/dashboard">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
             </li>
-            <li>
+            <li class="{{ Route::currentRouteName() == 'profile_path' ? 'active' : null }}">
               <a href="/profile">
                 <i class="fa fa-user"></i> <span>Profile</span>
               </a>
               <hr>
             </li>
-            <li>
+            <li class="{{ Route::currentRouteName() == 'stats_path' ? 'active' : null }}">
               <a href="/stats">
                 <i class="fa fa-area-chart"></i> <span>Stats</span>
               </a>
             </li>
-            <li>
+            <li class="{{ Route::currentRouteName() == 'help_path' ? 'active' : null }}">
               <a href="/help">
                 <i class="fa fa-question-circle"></i> <span>Help</span>
               </a>
