@@ -64,9 +64,10 @@ class LoginController extends Controller
         $accessToken = $this->twitterAPI->getAccessToken($oauthVerifier);
 
         $twitterUsername = $accessToken['screen_name'];
+        $user = $this->user->whereUsername($twitterUsername)->first();
 
         // Insert into database if no exist.
-        if (! $this->user->whereUsername($twitterUsername)->first())
+        if (!$user)
         {
             $user = $this->user->create([
                 'username' => $twitterUsername,

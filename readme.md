@@ -11,6 +11,7 @@ Documentation for the peristiwa can be found on the [peristiwa repository](http:
 1. clone repo peristiwa di https://github.com/dilbadil/persitiwa.git
 2. jalankan "composer install"
 3. copy file .env.example menjadi .env
+4. jangan lupa setting database di .env seperti DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD
 4. jalankan "php artisan migrate"
 5. jalankan "php artisan db:seed"
 6. jika ingin menggunakan server laravel jalankan "php artisan serv" dan buka browser di localhost:8000 (default)
